@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #161616;
+  color: #fff;
+  font-size: 14px;
+}
+
+#brand {
+  top: 80px;
+  left: 80px;
+  z-index: 10;
+  position: fixed;
+}
+#brand a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  text-decoration: none;
+}
+#brand a span {
+  font-size: 1.3rem;
+}
+
+nav {
+  position: absolute;
+  top: 90px;
+  right: 80px;
+  display: flex;
+  z-index: 10;
+  position: fixed;
+  font-family: "Roboto", sans-serif;
+}
+nav .toggler {
+  margin-left: 50px;
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+nav .toggler .close {
+  opacity: 0;
+}
+nav .toggler ion-icon {
+  color: #fff;
+  position: absolute;
+  font-size: 2rem;
+}
+nav ul li {
+  margin: 0 40px;
+  display: inline-block;
+}
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.social-media ul {
+  position: fixed;
+  right: 80px;
+  top: 340px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+.social-media ul li {
+  margin: 40px 0;
+  display: inline-block;
+}
+.social-media ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+#hero-section {
+  height: 150%;
+  width: 100%;
+  position: relative;
+}
+#hero-section h1 {
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  font-size: 4rem;
+  top: 445px;
+  left: 30px;
+  color: #ff5d73;
+  transform: rotate(90deg);
+  text-transform: uppercase;
+}
+#hero-section h2 {
+  position: absolute;
+  font-size: 80px;
+  top: 330px;
+  left: 640px;
+  color: #fff;
+  font-family: "Poiret One", cursive;
+  letter-spacing: 15px;
+  display: flex;
+  flex-direction: column;
+  text-transform: lowercase;
+}
+#hero-section .hero-img {
+  height: 500px;
+  width: 400px;
+  background-image: url(./images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 270px;
+  top: 240px;
+  z-index: -1;
+}
+
+#gallery-section {
+  height: auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  position: relative;
+  left: 10%;
+  margin-bottom: 320px;
+  margin-top: 80%;
+}
+#gallery-section h4 {
+  font-family: "Poiret One", cursive;
+  font-size: 52px;
+  margin-left: 10%;
+  margin-top: 10%;
+  display: block;
+  position: absolute;
+  opacity: 0;
+}
+#gallery-section .img-container:nth-child(even) {
+  margin-top: 180px;
+}
+#gallery-section .img-container {
+  height: 490px;
+  width: 70%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  cursor: none;
+}
+#gallery-section .img-container img {
+  height: 120%;
+  width: auto;
+  background-color: #111;
+}
+
+#footer-section {
+  height: 50vh;
+  width: 80%;
+  left: 10%;
+  justify-content: space-evenly;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+#footer-section .link {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  border: 1px solid #fff;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+}
+#footer-section .link a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */
