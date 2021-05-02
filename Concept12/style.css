@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("http://fonts.cdnfonts.com/css/monument-extended");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Monument Extended", sans-serif;
+  background-color: #d1d1d1;
+  color: #161616;
+  font-size: 16px;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #161616;
+  z-index: 2;
+}
+.wrapper .loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8%;
+  height: 20vh;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.container nav {
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  text-transform: uppercase;
+}
+.container nav .menu-item {
+  flex: 1;
+}
+.container nav .menu-item .menu-link:nth-child(2) {
+  margin-left: 50px;
+}
+.container nav .menu-left {
+  text-align: left;
+  opacity: 0;
+}
+.container nav .menu-center {
+  text-align: center;
+  opacity: 0;
+}
+.container nav .menu-right {
+  text-align: right;
+  opacity: 0;
+}
+@media (max-width: 900px) {
+  .container .wrapper-img {
+    width: 90%;
+  }
+}
+.container .wrapper-img {
+  overflow: hidden;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 30%;
+  height: 70vh;
+}
+.container .wrapper-img .box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 1;
+}
+.container .wrapper-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 900px) {
+  .container .header {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+  }
+  .container .header h1 {
+    font-size: 40px;
+  }
+}
+.container .header {
+  position: absolute;
+  top: 60%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+}
+.container .header h1 {
+  font-size: 90px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.container .header .header-1 .letter,
+.container .header .header-2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+.container .hero-container .sidebar-text {
+  opacity: 0;
+  position: absolute;
+  top: 20%;
+  right: 7%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: transparent;
+  -webkit-text-stroke: 2px #a5a5a5;
+}
+@media (max-width: 900px) {
+  .container .hero-container .projects,
+.container .hero-container .img-nav {
+    display: none;
+  }
+}
+.container .hero-container .projects {
+  opacity: 0;
+  position: absolute;
+  bottom: 10%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.container .hero-container .img-nav {
+  opacity: 0;
+  position: absolute;
+  right: 13%;
+  bottom: 13%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  color: grey;
+}
+.container .hero-container .img-nav .next {
+  position: relative;
+  top: 40px;
+  left: 80px;
+}/*# sourceMappingURL=style.css.map */

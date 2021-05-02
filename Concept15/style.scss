@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+@import url('http://fonts.cdnfonts.com/css/raiderfont');
+
+$font_1: 'Rationale', sans-serif;
+$font_2: 'Poppins', sans-serif;
+$font_3: 'Racing Sans One', cursive;
+$font_4: 'Montserrat', sans-serif;
+$font_5: 'Monument Extended', sans-serif;
+$font_6: 'Raiderfont', sans-serif;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 50;
+	box-sizing: content-box;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	font-size: 14px;
+	overflow: hidden;
+}
+
+.wrapper {
+	background-color: #161616;
+	width: 0%;
+	height: 100vh;
+	// Nav
+	nav {
+		font-family: $font_5;
+		color: #d1d1d1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.block-1 {
+			padding-left: 25px;
+			display: flex;
+			align-items: center;
+			.logo {
+				opacity: 0;
+				font-size: 2rem;
+			}
+			.menu {
+				ul {
+					li {
+						opacity: 0;
+						cursor: pointer;
+						display: inline-block;
+						margin: 0 1rem;
+					}
+				}
+			}
+		}
+		.block-2 {
+			ul {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				li {
+					opacity: 0;
+					font-size: 1.5rem;
+					cursor: pointer;
+					margin: 0 20px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+	// title
+
+	.title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
+		font-family: $font_5;
+
+		h1 {
+			width: 80vw;
+			font-size: 4.5rem;
+			letter-spacing: 10px;
+			color: #d1d1d1;
+			overflow: hidden;
+			height: 80px;
+			span {
+				position: relative;
+				bottom: -100%;
+			}
+		}
+		h4 {
+			overflow: hidden;
+			font-size: 2rem;
+			height: 40px;
+			color: #d1d1d1;
+			span {
+				position: relative;
+				bottom: -100%;
+			}
+		}
+	}
+
+	// Image
+	.img-wrapper1 {
+		position: absolute;
+		z-index: 1;
+		right: 10%;
+		top: 0%;
+		width: 50vw;
+		height: 100vh;
+		.img-main {
+			background-image: url(./img/01.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.img-wrapper2 {
+		position: absolute;
+		top: 20%;
+		left: 10%;
+		width: 20vw;
+		height: 60vh;
+
+		.img-hero {
+			background-image: url(./img/02.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.img-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #d1d1d1;
+	}
+	//social
+	.social {
+		position: absolute;
+		bottom: 20%;
+		right: 2.5%;
+		ul {
+			li {
+				opacity: 0;
+				cursor: pointer;
+				color: #d1d1d1;
+				font-size: 2rem;
+				margin: 1rem 0;
+			}
+		}
+	}
+	.scrolldown {
+		opacity: 0;
+		display: inline-block;
+		padding: 1rem;
+		position: absolute;
+		bottom: 15%;
+		font-size: 1.5rem;
+		letter-spacing: 10px;
+		writing-mode: sideways-lr;
+		span {
+			color: #d1d1d1;
+		}
+		&::before {
+			background-color: #d1d1d1;
+			content: '';
+			height: 3px;
+			width: 100px;
+			position: absolute;
+			bottom: -20%;
+			left: -30%;
+			transform: rotate(90deg);
+		}
+	}
+}

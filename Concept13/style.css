@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("http://fonts.cdnfonts.com/css/monument-extended");
+@import url("http://fonts.cdnfonts.com/css/raiderfont");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 50;
+  box-sizing: content-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.wrapper .left,
+.wrapper .right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+}
+.wrapper .left {
+  background-color: #d1d1d1;
+  left: 0%;
+  width: 0%;
+}
+.wrapper .right {
+  background-color: #161616;
+  right: 0%;
+  width: 100%;
+}
+.wrapper .nav {
+  opacity: 0;
+}
+.wrapper .nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  padding: 0 20px;
+}
+.wrapper .nav ul li {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 8px;
+  font-weight: 600;
+  padding: 0 30px;
+}
+.wrapper .nav ul .logo {
+  font-size: 18px;
+  letter-spacing: 0 30px;
+  flex: 1;
+}
+.wrapper .nav ul .menu {
+  font-size: 18px;
+  flex: 1;
+}
+.wrapper .nav ul .collection {
+  flex: 1;
+}
+.wrapper .nav ul .explore {
+  flex: 4;
+}
+.wrapper .nav ul .search {
+  flex: 3;
+}
+.wrapper .nav ul .profile {
+  flex: 0;
+}
+.wrapper .nav ul .profile .img {
+  background-image: url(./img/profile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.wrapper .content .img-wrapper {
+  position: absolute;
+  bottom: 0%;
+  left: 180px;
+}
+.wrapper .content .img-wrapper .image {
+  background-image: url(./img/01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 0px;
+  height: 550px;
+}
+.wrapper .content .info {
+  position: absolute;
+  bottom: -100px;
+  left: 180px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0 10px;
+}
+.wrapper .content .info ul li {
+  display: inline-block;
+  padding: 20px 25px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 8px;
+  font-weight: 600;
+}
+.wrapper .content .info ul li ion-icon {
+  font-size: 18px;
+}
+.wrapper .content .text {
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  transform: translate(-50%);
+}
+.wrapper .content .text h1 {
+  position: relative;
+  right: -250%;
+  font-size: 90px;
+  color: #fff;
+  font-family: "Raiderfont", sans-serif;
+  text-transform: uppercase;
+}
+.wrapper .content .text p {
+  position: relative;
+  right: -250%;
+  font-size: 20px;
+  color: #fff;
+  font-family: monospace;
+}
+.wrapper .content .name {
+  position: absolute;
+  top: 50%;
+  left: -800px;
+  transform: translateY(-50%);
+  font-size: 90px;
+  font-family: "Raiderfont", sans-serif;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+.wrapper .content .bottomnav {
+  position: absolute;
+  bottom: 100px;
+  right: -300px;
+}
+.wrapper .content .bottomnav ul li {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */

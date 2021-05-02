@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="./style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Adam Rowney</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="nav">
+				<div class="logo">
+					<div class="img">MODEL</div>
+					<div class="media">
+						<ul>
+							<li>FaceBook</li>
+							<li>Twitter</li>
+							<li>Instagram</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="close-mobile">
+						<img src="./img/close-outline.svg" alt="" />
+					</div>
+					<ul>
+						<li>Home</li>
+						<li>About</li>
+						<li>Fashion</li>
+						<li>Blog</li>
+						<li>Sessions</li>
+					</ul>
+				</div>
+				<div class="menu-mobile">
+					<img src="./img/drag_handle_black_24dp.svg" alt="" />
+				</div>
+			</div>
+			<div class="img-wrapper">
+				<h1>
+					I'm <br />
+					<span
+						>Adam <br />
+						Rowney</span
+					>
+				</h1>
+				<div class="image">
+					<div class="my-img"></div>
+				</div>
+			</div>
+			<div class="title">
+				<h1>ITALI<span>CLASSIC</span> <span>MODEL</span></h1>
+			</div>
+			<div class="contact">
+				<div class="name">Contact</div>
+				<ion-icon name="arrow-forward"></ion-icon>
+			</div>
+		</div>
+	</body>
+	<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+	<script src="./node_modules/hover-effect/dist/hover-effect.umd.js"></script>
+	<script src="./index.js"></script>
+	<script>
+		var myAnimation = new hoverEffect({
+			parent: document.querySelector('.my-img'),
+			intensity: 0.9,
+			image1: './img/1.jpg',
+			image2: './img/2.jpg',
+			displacementImage: './img/Diss.png',
+		});
+	</script>
+</html>

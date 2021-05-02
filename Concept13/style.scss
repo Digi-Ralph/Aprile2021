@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+@import url('http://fonts.cdnfonts.com/css/raiderfont');
+$font_1: 'Rationale', sans-serif;
+$font_2: 'Poppins', sans-serif;
+$font_3: 'Racing Sans One', cursive;
+$font_4: 'Montserrat', sans-serif;
+$font_5: 'Monument Extended', sans-serif;
+$font_6: 'Raiderfont', sans-serif;
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 50;
+	box-sizing: content-box;
+}
+
+ul {
+	list-style: none;
+}
+body {
+	font-family: $font_4;
+	font-size: 14px;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	.left,
+	.right {
+		position: absolute;
+		width: 50%;
+		height: 100%;
+		z-index: -1;
+	}
+	.left {
+		background-color: #d1d1d1;
+		left: 0%;
+		width: 0%;
+	}
+	.right {
+		background-color: #161616;
+		right: 0%;
+		width: 100%;
+	}
+	.nav {
+		opacity: 0;
+		ul {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			height: 80px;
+			padding: 0 20px;
+			li {
+				display: inline-block;
+				color: #fff;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				font-size: 8px;
+				font-weight: 600;
+				padding: 0 30px;
+			}
+			.logo {
+				font-size: 18px;
+				letter-spacing: 0 30px;
+				flex: 1;
+			}
+			.menu {
+				font-size: 18px;
+				flex: 1;
+			}
+			.collection {
+				flex: 1;
+			}
+			.explore {
+				flex: 4;
+			}
+			.search {
+				flex: 3;
+			}
+			.profile {
+				flex: 0;
+				.img {
+					background-image: url(./img/profile.jpg);
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					border-radius: 50%;
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+	.content {
+		.img-wrapper {
+			position: absolute;
+			bottom: 0%;
+			left: 180px;
+			.image {
+				background-image: url(./img/01.jpg);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				width: 0px;
+				height: 550px;
+			}
+		}
+		.info {
+			position: absolute;
+			bottom: -100px;
+			left: 180px;
+			background-color: rgba(0, 0, 0, 0.8);
+			padding: 0 10px;
+			ul {
+				li {
+					display: inline-block;
+					padding: 20px 25px;
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 3px;
+					font-size: 8px;
+					font-weight: 600;
+					ion-icon {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		.text {
+			position: absolute;
+			top: 50%;
+			right: 100px;
+			transform: translate(-50%);
+			h1 {
+				position: relative;
+				right: -250%;
+				font-size: 90px;
+				color: #fff;
+				font-family: $font_6;
+				text-transform: uppercase;
+			}
+			p {
+				position: relative;
+				right: -250%;
+				font-size: 20px;
+				color: #fff;
+				font-family: monospace;
+			}
+		}
+		.name {
+			position: absolute;
+			top: 50%;
+			left: -800px;
+			transform: translateY(-50%);
+			font-size: 90px;
+			font-family: $font_6;
+			text-transform: uppercase;
+			color: transparent;
+			-webkit-text-stroke: 2px #fff;
+		}
+		.bottomnav {
+			position: absolute;
+			bottom: 100px;
+			right: -300px;
+			ul {
+				li {
+					color: #fff;
+					text-transform: uppercase;
+					letter-spacing: 15px;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

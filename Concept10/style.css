@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Limelight", cursive;
+  background-color: #161616;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.toggle-btn {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  padding: 22px 25px;
+  background-color: #ffe63e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-bottom-right-radius: 100px;
+  cursor: pointer;
+}
+.toggle-btn img {
+  width: 30px;
+  position: absolute;
+}
+.toggle-btn img.close-icon {
+  opacity: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 0 100% 0;
+  background-color: #ffe63e;
+  z-index: 9;
+  transform: scale(0);
+  transform-origin: top left;
+}
+.menu nav {
+  transition: all ease 0.5s;
+  padding: 50px 100px;
+}
+.menu nav ul {
+  list-style: none;
+}
+.menu nav ul li {
+  margin-top: 30px;
+  font-size: 2.8rem;
+}
+.menu nav ul li a {
+  color: #161616;
+  text-decoration: none;
+  position: relative;
+}
+.menu nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 0%;
+  height: 3px;
+  background-color: #161616;
+  transition: all ease 0.5s;
+}
+.menu nav ul li a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+}
+.wrapper .text {
+  width: 50%;
+  height: 100vh;
+  padding: 15px 15px 15px 100px;
+  display: flex;
+  align-items: center;
+}
+.wrapper .text .text-inner h1 {
+  font-size: 70px;
+  line-height: 84px;
+  font-weight: normal;
+  color: #ffe63e;
+  text-transform: uppercase;
+}
+.wrapper .text .text-inner p {
+  font-size: 20px;
+  color: #fbf7db;
+  text-transform: uppercase;
+  margin-top: 15px;
+  letter-spacing: 4px;
+}
+.wrapper .text .text-inner .btn {
+  position: relative;
+  display: inline-block;
+  width: 250px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border: 1px solid #ffe63e;
+  color: #ffe63e;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-top: 80px;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+.wrapper .text .text-inner .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe63e;
+  z-index: -1;
+  transition: all ease 0.5s;
+}
+.wrapper .text .text-inner .btn:hover::before {
+  left: 0;
+}
+.wrapper .text .text-inner .btn:hover {
+  font-weight: 700;
+  color: #161616;
+}
+.wrapper .text .text-inner .social {
+  bottom: 100px;
+  margin-top: 200px;
+  position: absolute;
+  bottom: 50px;
+}
+.wrapper .text .text-inner .social a {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: #fbf7db;
+  margin-right: 10px;
+  border: 1px solid #53636d;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .text .text-inner .social a ion-icon {
+  font-size: 20px;
+}
+.wrapper .text .text-inner .social a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffe63e;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: all ease 0.5s;
+}
+.wrapper .text .text-inner .social a:hover::before {
+  transform: scale(1);
+}
+.wrapper .text .text-inner .social a:hover {
+  color: #161616;
+}
+.wrapper .img {
+  width: 55%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .img .img-stripe {
+  width: calc(50% - 150px);
+}
+.wrapper .img .img-stripe img {
+  width: 300px;
+  margin: 15px;
+}
+.wrapper .img .stripe1 {
+  -webkit-animation: stripe-one 60s ease 0s infinite;
+          animation: stripe-one 60s ease 0s infinite;
+}
+.wrapper .img .stripe2 {
+  -webkit-animation: stripe-two 60s ease 0s infinite;
+          animation: stripe-two 60s ease 0s infinite;
+  transform: translateY(-200%);
+}
+
+@-webkit-keyframes stripe-one {
+  50% {
+    transform: translateY(-200%);
+  }
+}
+
+@keyframes stripe-one {
+  50% {
+    transform: translateY(-200%);
+  }
+}
+@-webkit-keyframes stripe-two {
+  50% {
+    transform: translateY(0%);
+  }
+}
+@keyframes stripe-two {
+  50% {
+    transform: translateY(0%);
+  }
+}/*# sourceMappingURL=style.css.map */

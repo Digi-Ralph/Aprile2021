@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Racing Sans One", cursive;
+  background-color: #d1d1d1;
+  color: #161616;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.wrapper .nav {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  opacity: 0;
+}
+.wrapper .nav .logo {
+  display: inline-block;
+  height: 100vh;
+}
+.wrapper .nav .logo .img {
+  font-weight: 500;
+}
+.wrapper .nav .logo .media {
+  position: relative;
+  top: 40%;
+  right: 40%;
+}
+.wrapper .nav .logo .media ul {
+  list-style: none;
+}
+.wrapper .nav .logo .media ul li {
+  text-align: center;
+  margin-top: 4em;
+  transform: rotate(-90deg);
+}
+.wrapper .nav .menu {
+  padding-right: 80px;
+}
+.wrapper .nav .menu .close-mobile {
+  display: none;
+}
+.wrapper .nav .menu ul {
+  list-style: none;
+}
+.wrapper .nav .menu ul li {
+  margin-left: 30px;
+  display: inline-block;
+}
+.wrapper .nav .menu-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .wrapper .nav .menu {
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    right: -200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 99;
+    transition: all 1s ease-in-out;
+    padding-right: 0px;
+  }
+  .wrapper .nav .menu ul li {
+    margin-left: 0px;
+  }
+  .wrapper .nav .menu .close-mobile {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    top: 1.5%;
+    right: 4%;
+  }
+  .wrapper .nav .menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper .nav .menu ul li {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+  .wrapper .nav .menu.active {
+    right: 0%;
+  }
+  .wrapper .nav .menu-mobile {
+    cursor: pointer;
+    padding-right: 30px;
+    display: block;
+  }
+}
+.wrapper .img-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 500px;
+  border-radius: 5px;
+}
+.wrapper .img-wrapper h1 {
+  opacity: 0;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 4rem;
+  z-index: 50;
+}
+.wrapper .img-wrapper h1 span {
+  color: #f72424;
+}
+.wrapper .img-wrapper .image {
+  opacity: 0;
+  width: 300px;
+  height: 500px;
+  width: 300px;
+}
+.wrapper .img-wrapper .image .my-img {
+  height: 500px;
+}
+@media (max-width: 600px) {
+  .wrapper .img-wrapper {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: 0 auto;
+    left: 40%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
+  .wrapper .img-wrapper h1 {
+    position: relative;
+    z-index: 40;
+    font-size: 3rem;
+    left: 40%;
+    top: 15%;
+  }
+  .wrapper .img-wrapper .image {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 250px;
+  }
+  .wrapper .img-wrapper .image .my-img {
+    width: 250px;
+    height: 400px;
+  }
+}
+.wrapper .contact {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  width: 200px;
+  height: 56px;
+  bottom: 0%;
+  right: 10%;
+  background-color: #161616;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.wrapper .contact .name {
+  color: #d1d1d1;
+}
+.wrapper .contact ion-icon {
+  color: #d1d1d1;
+}
+@media (max-width: 600px) {
+  .wrapper .contact {
+    right: 0%;
+  }
+}
+.wrapper .title {
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  right: 10%;
+}
+.wrapper .title h1 {
+  transform: rotate(-90deg);
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+.wrapper .title h1 span {
+  display: block;
+}
+@media (max-width: 600px) {
+  .wrapper .title {
+    top: 55%;
+    left: -40%;
+  }
+  .wrapper .title h1 {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */
