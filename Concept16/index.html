@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="./style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header>
+				<div class="left">
+					<div class="logo">A</div>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="#">Model</a></li>
+						<li><a href="#">Country</a></li>
+						<li><a href="#">Gallery</a></li>
+						<li><a href="#">Insights</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</header>
+
+			<div class="slider">
+				<div class="slider-inner">
+					<div class="item" data-text="Maxima">
+						<img src="./img/Untitled-1.png" alt="" />
+						<div class="text">
+							<h1>Maxima<br />Fugit</h1>
+						</div>
+					</div>
+					<div class="item" data-text="Elmer">
+						<img src="./img/Untitled-2.png" alt="" />
+						<div class="text">
+							<h1>Elmer<br />Schimdt</h1>
+						</div>
+					</div>
+					<div class="item" data-text="Debitis">
+						<img src="./img/Untitled-3.png" alt="" />
+						<div class="text">
+							<h1>Debitis<br />omnis</h1>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="btn">Expolore</a>
+			</div>
+			<div class="wave-line">
+				<div class="line line1"></div>
+				<div class="line line2"></div>
+				<div class="line line3"></div>
+			</div>
+		</div>
+	</body>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+	<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+	<script src="./index.js"></script>
+	<script>
+		$('.slider-inner').slick({
+			infinite: false,
+			slidesToshow: 1,
+			slidesToScroll: 1,
+			swipe: false,
+			fade: true,
+			speed: 1500,
+		});
+
+		$('.slider-inner').on('beforeChange', function () {
+			$('.slider-inner .item img').css(
+				'clip-path',
+				'polygon(0 0, 100% 0, 100% 0%, 0% 0%)'
+			);
+			setTimeout(function () {
+				$('.slider-inner .item img').css(
+					'clip-path',
+					'polygon(0 0, 100% 0, 100% 0%, 0% 0%)'
+				);
+			}, 100);
+			$('.text h1').css('transform', 'scale(0)');
+		});
+		$('.slider-inner').on('afterChange', function () {
+			$('.slider-inner .item img').css(
+				'clip-path',
+				'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
+			);
+			setTimeout(function () {
+				$('.slider-inner .item img').css(
+					'clip-path',
+					'polygon(0 0, 100% 0, 100% 100%, 0% 100%)'
+				);
+			}, 100);
+			$('.text h1').css('transform', 'scale(1)');
+		});
+	</script>
+</html>

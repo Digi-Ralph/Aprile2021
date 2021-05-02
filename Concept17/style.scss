@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
+@import url('http://fonts.cdnfonts.com/css/raiderfont');
+
+$font_1: 'Rationale', sans-serif;
+$font_2: 'Poppins', sans-serif;
+$font_3: 'Racing Sans One', cursive;
+$font_4: 'Montserrat', sans-serif;
+$font_5: 'Monument Extended', sans-serif;
+$font_6: 'Raiderfont', sans-serif;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 50;
+	box-sizing: content-box;
+}
+
+ul {
+	list-style: none;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(253, 210, 253, 0.213);
+	.lines {
+		position: relative;
+		z-index: -1;
+		width: 100%;
+		height: 100vh;
+		.lines1 {
+			position: absolute;
+			left: 25%;
+			width: 1px;
+			background-color: #161616;
+			opacity: 0.5;
+			height: 100vh;
+		}
+		.lines2 {
+			position: absolute;
+			left: 50%;
+			opacity: 0.5;
+			background-color: #161616;
+			width: 1px;
+			height: 100vh;
+		}
+		.lines3 {
+			position: absolute;
+			left: 75%;
+			opacity: 0.5;
+			background-color: #161616;
+			width: 1px;
+			height: 100vh;
+		}
+	}
+	nav {
+		position: absolute;
+		top: 0%;
+		right: 0%;
+		width: 100%;
+		height: 50px;
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
+		.menu {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			justify-content: space-between;
+			width: 250px;
+			.hamberger {
+				width: 40px;
+				height: 25px;
+				cursor: pointer;
+				position: relative;
+				right: 9%;
+				opacity: 0;
+				span:nth-child(1) {
+					border-radius: 10px;
+					position: absolute;
+					right: 6px;
+					bottom: 17px;
+					display: block;
+					width: 25px;
+					height: 2px;
+					background-color: #161616;
+				}
+				span:nth-child(3) {
+					position: absolute;
+					bottom: 3px;
+					right: 6px;
+					display: block;
+					width: 25px;
+					height: 2px;
+					background-color: black;
+				}
+				span:nth-child(2) {
+					position: absolute;
+					bottom: 10px;
+					right: 6px;
+					display: block;
+					width: 25px;
+					height: 2px;
+					background-color: black;
+				}
+			}
+		}
+		.search-cart {
+			height: 20px;
+			ion-icon {
+				opacity: 0;
+				margin: 0 10px;
+				font-size: 20px;
+			}
+		}
+		.logo {
+			opacity: 0;
+			padding-left: 30px;
+			font-family: $font_5;
+			font-size: 20px;
+		}
+	}
+	a {
+		opacity: 0;
+		text-decoration: none;
+		writing-mode: sideways-lr;
+		position: absolute;
+		bottom: 50%;
+		left: 1%;
+		font-family: $font_2;
+		font-size: 30px;
+		color: #161616;
+	}
+
+	.social {
+		position: absolute;
+		bottom: 10%;
+		right: 2%;
+		display: flex;
+		flex-direction: column;
+		ion-icon {
+			opacity: 0;
+			margin-top: 20px;
+			font-size: 25px;
+		}
+	}
+
+	.container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		// border: 1px solid red;
+		.img-container {
+			width: 500px;
+			height: 300px;
+			overflow: hidden;
+			position: relative;
+
+			img {
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				opacity: 1;
+			}
+			.mask {
+				// content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: #d1d1d1;
+			}
+		}
+		.text-container {
+			position: absolute;
+			top: 20%;
+			left: 80%;
+			width: 350px;
+			text-align: center;
+			// background-color: black;
+			h1 {
+				font-family: $font_5;
+				font-size: 5rem;
+			}
+			.mask {
+				// content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: #000000;
+			}
+		}
+		.title-container {
+			width: 250px;
+			height: 50px;
+			margin-left: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			// background-color: black;
+
+			h1 {
+				color: #000000;
+				font-size: 1.5rem;
+			}
+			.mask {
+				// content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: #bfbebf;
+			}
+		}
+	}
+	.comment {
+		position: absolute;
+		top: 15%;
+		left: 10%;
+		h1 {
+			font-family: $font_2;
+			font-size: 1.5rem;
+		}
+	}
+}
